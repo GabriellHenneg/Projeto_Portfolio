@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de TI - Nome do Estudante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fonte e plano de fundo */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f1824;
+            color: #18818f;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho com efeito de paralaxe */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://source.unsplash.com/1600x900/?technology,code');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #c5c0bd;
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 10px rgba(150, 23, 23, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #fefefe;
+        }
+
+        /* Foto de perfil */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid #f2e9e4;
+        }
+
+        /* Conteúdo */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #5249b0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Seções */
+        .section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background: #130f4100;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skill, .project {
+            background-color: #17146a00;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            flex: 1 1 30%;
+            min-width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill:hover, .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill h3, .project h3 {
+            font-size: 1.5rem;
+            color: #310dfa;
+            margin-bottom: 10px;
+        }
+
+        .skill i, .project i {
+            font-size: 2.5rem;
+            color: #310dfa;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .skill:hover i, .project:hover i {
+            color: #22223b;
+        }
+
+        .skill p, .project p {
+            color: rgba(0, 0, 0, 0.15#23a723);
+        }
+
+        /* Imagens dos projetos */
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project:hover img {
+            transform: scale(1.05);
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #310dfa;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .project a:hover {
+            background-color: #b0196a;
+            transform: scale(1.1);
+        }
+
+        /* Seção de Contato */
+        .contact p {
+            font-size: 1.1rem;
+            color: #5249b0;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .contact a {
+            color: #310dfa;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #22223b;
+        }
+
+        footer {
+            background-color: #0f1824;
+            color: #f2e9e4;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="/img/foto de perfil.png" alt="Foto do Estudante" class="profile-img">
+        <h1>Gabriell Henneg - Portfólio de TI</h1>
+        <p>Bem-vindo ao meu portfólio! Sou um estudante de TI com interesse em desenvolvimento e suporte técnico.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Seção de Introdução -->
+        <section class="section">
+            <h2>Sobre Mim</h2>
+            <p>Sou um estudante de Tecnologia da Informação em busca de oportunidades para aplicar meus conhecimentos em desenvolvimento de software e administração de banco de dados. Tenho experiência em suporte técnico e conhecimento em linguagens como Java e SQL.</p>
+        </section>
+
+        <!-- Seção de Habilidades -->
+        <section class="section">
+            <h2>Habilidades</h2>
+            <div class="skills">
+                <div class="skill">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p>Conhecimento em desenvolvimento backend com Java, incluindo manipulação de dados e criação de APIs.</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>Capacidade de trabalhar com bancos de dados relacionais, desenvolvendo consultas eficientes e gerenciando dados.</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML e CSS</h3>
+                    <p>Experiência com criação de sites e estilização usando HTML e CSS.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Projetos -->
+        <section class="section">
+            <h2>Projetos</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="/IMG/PORTIFOLIO.jpg" alt="Imagem do Projeto 1">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto, o que foi feito, as tecnologias usadas e o link para o repositório.</p>
+                    <a href="#" target="_blank">Ver no GitHub</a>
+                </div>
+                <div class="project">
+                    <img src="/img/PROJETO2_.PNG" alt="Imagem do Projeto 2">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto, o que foi feito, as tecnologias usadas e o link para o repositório.</p>
+                    <a href="https://github.com/GabriellHenneg/Desafio-Aula-POO-Java.git" target="_blank">Ver no GitHub</a>
+                </div>
+                <!--<div class="project">
+                    <img src="https://via.placeholder.com/300x200" alt="Imagem do Projeto 3">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do projeto, o que foi feito, as tecnologias usadas e o link para o repositório.</p>
+                    <a href="#" target="_blank">Ver no GitHub</a>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section class="section contact">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo por e-mail: <a href="ggabriell.henneg@gmail.com">ggabriell.henneg@gmail.com</a></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gabriell Henneg</p>
+    </footer>
+
+</body>
+</html>
